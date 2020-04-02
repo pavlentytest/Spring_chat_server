@@ -12,23 +12,23 @@ public class MyWebSocket extends AbstractWebSocketHandler {
         String msg = message.getPayload();
         switch(msg){
             case("1"):
-                System.out.println("User1 button was pressed");
-                session.sendMessage(new TextMessage("Woooof"));
+                System.out.println("Ответ от сервера (пользователь нажал кнопку1) ");
+                session.sendMessage(new TextMessage("Я пользователь 1, меня зовут Иван!"));
                 break;
             case("2"):
-                System.out.println("User2 button was pressed");
-                session.sendMessage(new TextMessage("Meooow"));
+                System.out.println("Ответ от сервера (пользователь нажал кнопку2) ");
+                session.sendMessage(new TextMessage("Я пользователь 2, меня зовут Мария!"));
                 break;
             case("3"):
-                System.out.println("User3 button was pressed");
-                session.sendMessage(new TextMessage("Bork Bork"));
+                System.out.println("Ответ от сервера (пользователь нажал кнопку3) ");
+                session.sendMessage(new TextMessage("Я пользователь 3, меня зовут Александр!"));
                 break;
             case("4"):
-                System.out.println("User4 button was pressed");
-                session.sendMessage(new TextMessage("Fraka-kaka-kaka"));
+                System.out.println("Ответ от сервера (пользователь нажал кнопку4) ");
+                session.sendMessage(new TextMessage("Я пользователь 4, меня зовут Марина!"));
                 break;
             default:
-                System.out.println("Connected to Client");
+                System.out.println("Подключились к клиенту...");
         }
     }
 }
